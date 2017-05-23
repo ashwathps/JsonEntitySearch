@@ -37,7 +37,7 @@ The tests are written using a BDD. NodeJS has an extensive library collection to
 ### SRP
 The application has 4 components that are built on SRP principles, the query parser, executor, entity builder and the formatter.
 1. The parser is simple and supports either OR or AND operations on the query string, the query string comes from the command-line in accordance with the documented format.
-2. The query runner gets the fields to search on from the parser and filters the entities using Underscore npm package
+2. The query runner gets the fields to search on from the parser and filters the entities using Underscore/lodash npm package
 3. The resource/entity builder reads and understands a relationship graph to extend the present payload. The graph is a simple JSON file with entity fields mapping.
 4. The query formatter is a simple console string formatter, it is reads the payload and creates a user friendly result string.
 
