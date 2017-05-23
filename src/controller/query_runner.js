@@ -62,11 +62,6 @@ class QueryRunner {
   }
 
   find(search_space, search_fields, search_op) {
-    // if(search_op.and) {
-    //   // AND operation or just a single query field
-    //   this.results = _.filter(search_space, _.matches(search_fields));
-    // }
-    // else {
     this.results = this.iterate_and_search(search_space, search_fields, search_op);
     return this.results;
   }
