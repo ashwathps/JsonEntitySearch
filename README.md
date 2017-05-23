@@ -1,4 +1,4 @@
-# EntitySearcher
+# Json Entity Search Tool
 A JSON search cli tool using Ash's query language (AQL)
 
 # Getting started
