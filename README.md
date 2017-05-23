@@ -41,6 +41,7 @@ The application has 4 components that are built on SRP principles, the query par
 3. The resource/entity builder reads and understands a relationship graph to extend the present payload. The graph is a simple JSON file with entity fields mapping.
 4. The query formatter is a simple console string formatter, it is reads the payload and creates a user friendly result string.
 
+### OCP
 The search functionality is extensible in terms of adding new resources/entities and searching them without making code changes. All one needs to do is, put a new json entity under the ‘models’ folder and update the relationship graph. However, the query formatter is currently written for just these 3 entities (tickets, users, orgs)
 
 ### Performance
