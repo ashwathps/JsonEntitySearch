@@ -1,0 +1,19 @@
+
+{
+  "users":  {
+    "organizations": {
+      "joinWith" : "organization_id",
+      "joinOn": "_id"
+    },
+    "tickets": {
+      "joinWith" : "_id",
+      "joinOn": ["submitter_id", "assignee_id"]
+    }
+  },
+  "tickets" : {
+    "organizations": {
+      "joinWith" : "organization_id",
+      "joinOn": "_id"
+    }
+  }
+}
