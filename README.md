@@ -44,8 +44,10 @@ The application has 4 components that are built on SRP principles, the query par
 The search functionality is extensible in terms of adding new resources/entities and searching them without making code changes. All one needs to do is, put a new json entity under the ‘models’ folder and update the relationship graph. However, the query formatter is currently written for just these 3 entities (tickets, users, orgs)
 
 ### Performance
-The applications runtime performance is a downward curve (# of queries executed Vs time taken), this is due to built-in caching. Since runtime updates to JSON model data is not in the scope of this application, as more queries are run the faster it gets. Caching is implemented using LRU and purges every X mins. (configurable via the ENV variable ‘QUERY_CACHE_DURATION’)
+The applications runtime performance is a downward curve (# of queries executed Vs time taken), this is due to built-in caching. Since runtime updates to JSON model data is not in the scope of this application, as more queries are run the faster it gets. Caching is implemented using LRU and purges every X mins. (configurable via the ENV variable ‘QUERY_CACHE_DURATION’).
+
 In the real world, efficiently sharded DBs can be stored entirely in memory to reduce round trip latencies. Caching improves query times and reduces the round trip calls to DBs but suffers consistency. An efficient purge will improve read throughput. Writes must invalidate caches.
+
 Data load performance is limited by the system memory and LRU cache purges entities that are not used for a long time.
 
 
