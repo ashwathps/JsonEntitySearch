@@ -21,6 +21,27 @@ The query format is also displayed on the screen like this.
    > search <resource> where <\"double quoted Where clause\">
 
 ```
+Output
+
+```
+search entities using Ash's Query Language (AQL).
+Valid formats: search <resource> where <"double quoted where clause">
+Eg: search tickets where description=''
+Eg: search organizations where "shared_tickets=true"
+Eg: search users where "suspended=true OR tags=Sutton,Springville"
+
+
+ Query> search users where "suspended=true OR tags=Sutton,Springville"
+There are 36 users matching the query string.
+ The users are:
+ -------------------------------------
+
+ Francisca Rasmussen with alias Miss Coffey from Sri Lanka. Belongs to Multron org. Has 4 ticket/s in state submitter_id,assignee_id
+ Rose Newton with alias Mr Cardenas from Netherlands. Belongs to Geekfarm org. Has 4 ticket/s in state submitter_id,assignee_id
+ Lou Schmidt with alias Miss Shannon from Central African Republic. Belongs to Xylar org. Has 3 ticket/s in state submitter_id,assignee_id
+...
+...
+```
 
 ### Unit tests
 The tests are written using a BDD. NodeJS has an extensive library collection to support BDD. This repo uses chai, assert, should and SinonJs for method stubs.
