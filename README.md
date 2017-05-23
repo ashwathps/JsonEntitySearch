@@ -51,4 +51,6 @@ In the real world, efficiently sharded DBs can be stored entirely in memory to r
 
 Data load performance is limited by the system memory and LRU cache purges entities that are not used for a long time.
 
+Due to the commandline nature of the application, its hard to define number of users. An API gateway/ SaaS like software has more scope to define and design a high performance API with load balancing, high availability and throughput with globally distributed caches.
+
 
