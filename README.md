@@ -32,3 +32,6 @@ The tests are written using a BDD. NodeJS has an extensive library collection to
 ```
   > ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha ./test/**/*.test.js -- -R spec
 ```
+
+# Design decisions
+
