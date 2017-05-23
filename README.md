@@ -7,7 +7,7 @@ Install Git and NodeJs v6 or above
 
 Setup:
 ```
-  git clone this repo
+  git clone 'this repo'
   npm install
 ```
 # Usage 
